@@ -1,0 +1,59 @@
+ gdb .\problem03.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\Admin\C-activity-sets\c-activity-sets\set01\problem03.exe...done.
+(gdb) b     
+No default breakpoint address now.
+(gdb) b main
+Breakpoint 1 at 0x4014d8: file problem03.c, line 33.
+(gdb) b 23
+Breakpoint 2 at 0x401490: file problem03.c, line 23.
+(gdb) b 27
+Breakpoint 3 at 0x4014a6: file problem03.c, line 27.
+(gdb) info b
+Num     Type           Disp Enb Address    What
+1       breakpoint     keep y   0x004014d8 in main at problem03.c:33
+2       breakpoint     keep y   0x00401490 in add at problem03.c:23
+3       breakpoint     keep y   0x004014a6 in output at problem03.c:27
+(gdb) r
+Starting program: C:\Users\Admin\C-activity-sets\c-activity-sets\set01/.\problem03.exe
+[New Thread 13884.0x1c88]
+[New Thread 13884.0xa8c]
+
+Breakpoint 1, main () at problem03.c:33
+33          a=input();
+(gdb) print a
+$1 = 2822144
+(gdb) print b
+$2 = 0
+(gdb) print sum
+$3 = 6755848
+(gdb) n
+Enter the numbers
+2 
+34          b=input();
+(gdb) n
+Enter the numbers
+3
+35          sum=add(a,b);
+(gdb) n
+
+Breakpoint 2, add (a=2, b=3) at problem03.c:23
+23          sum=a+b;
+(gdb) s  
+24          return sum;
+(gdb) p sum
+$4 = 5
+(gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 13884] will be killed.
+
+Quit anyway? (y or n) y
