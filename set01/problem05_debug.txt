@@ -1,0 +1,33 @@
+ gdb .\problem05.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\Admin\C-activity-sets\c-activity-sets\set01\problem05.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x401510: file .\problem05.c, line 39.
+(gdb) r
+Starting program: C:\Users\Admin\C-activity-sets\c-activity-sets\set01/.\problem05.exe
+[New Thread 3432.0x1758]
+[New Thread 3432.0x4ca0]
+
+Breakpoint 1, main () at .\problem05.c:39
+39          a = input();
+(gdb) n
+Enter the number
+4
+40          b = input();
+(gdb) n
+Enter the number
+44
+41          c = input();
+(gdb) n
+Enter the number
+4
+42          largest = compare(a,b,c);
+(gdb) q
