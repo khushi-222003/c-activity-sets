@@ -25,7 +25,7 @@ return num;
     
      }
      void output(double x, double root){
-        printf("The square of %lf",root);
+        printf("The square of %lf\n",root);
 
      }
      int main(){
