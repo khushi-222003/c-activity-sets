@@ -1,0 +1,60 @@
+gdb problem10.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\Admin\C-activity-sets\c-activity-sets\set01\problem10.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x401565: file .\problem10.c, line 35.
+(gdb) r
+Starting program: C:\Users\Admin\C-activity-sets\c-activity-sets\set01/problem10.exe
+[New Thread 17400.0x42a8]
+[New Thread 17400.0x13f0]
+
+Breakpoint 1, main () at .\problem10.c:35
+35          input_two_strings(string1,string2);
+(gdb) n 
+enter the two stringshello
+hey
+36          result=stringcompare(string1, string2);
+(gdb) n
+37          output(string1, string2, result);
+(gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 17400] will be killed.
+
+Quit anyway? (y or n) n
+Not confirmed.
+(gdb) s
+output (string1=0x61fb34 "hello", string2=0x61f74c "hey", result=-1) at .\problem10.c:23
+23          if(result>0){
+(gdb) s
+25              else if(result<0){
+(gdb) s
+26                  printf("%s is greater", string2);
+(gdb) s
+hey is greater31        }
+(gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 17400] will be killed.
+
+Quit anyway? (y or n) y
+error return ../../gdb-7.6.1/gdb/windows-nat.c:1275 was 5
+PS C:\Users\Admin\C-activity-sets\c-activity-sets\set01> git push
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 1.50 KiB | 1.50 MiB/s, done.
+Total 9 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), completed with 4 local objects.
+To https://github.com/khushi-222003/c-activity-sets.git
+   779d03b..368151f  main -> main
+PS C:\Users\Admin\C-activity-sets\c-activity-sets\set01> 
