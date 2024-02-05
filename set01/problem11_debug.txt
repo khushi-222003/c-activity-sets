@@ -1,0 +1,47 @@
+gdb problem11.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\Admin\C-activity-sets\c-activity-sets\set01\problem11.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x4014ee: file ./problem11.c, line 25.
+(gdb) r
+Starting program: C:\Users\Admin\C-activity-sets\c-activity-sets\set01/problem11.exe
+[New Thread 11024.0x2d78]
+[New Thread 11024.0x418]
+
+Breakpoint 1, main () at ./problem11.c:25
+25          num1 = inputComplex();
+(gdb) n 
+Enter the real and imaginary parts of the complex number:2 3
+26          num2 = inputComplex();
+(gdb) n
+Enter the real and imaginary parts of the complex number:27         sum = addComplex(num1,num2);
+(gdb) 3 4
+Undefined command: "3".  Try "help".
+(gdb) n
+28          displayComplex(sum);
+(gdb) s
+displayComplex (num=...) at ./problem11.c:21
+21          printf("Sum = %.2f +%.2fi\n",num.real, num.imaginary);
+(gdb) s
+Sum = 5.00 +0.00i
+22      
+(gdb) s
+main () at ./problem11.c:29
+29          return 0;
+(gdb) s
+30      (gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 11024] will be killed.
+
+Quit anyway? (y or n) y
+error return ../../gdb-7.6.1/gdb/windows-nat.c:1275 was 5
+PS C:\Users\Admin\C-activity-sets\c-activity-sets\set01>
