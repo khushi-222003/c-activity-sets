@@ -22,11 +22,14 @@ int is_composite(int n){
         if(n%i==0){
             return 1;
         }
-    }
+        else{
+    
     return 0;
+        }
+}
 }
 void output(int n ,int result){
-    if(result==1){
+    if(result>0){
         printf("%d is a composite number", n);
     }
     else{
