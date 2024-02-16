@@ -32,11 +32,12 @@ void output(int sum){
     printf("The sum of composite number is %d", sum);
 }
 int main(){
-    int n, sum;
+    int n;
     n=input_array_size();
     int a[100];
     input_array(n,a);
     is_composite(n);
+    int sum;
     sum=sum_composite_number(n,a);
     output(sum);
     return 0;
