@@ -1,0 +1,41 @@
+gdb .\problem08.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+.\problem08.exe: No such file or directory.
+(gdb) b main
+No symbol table is loaded.  Use the "file" command.
+Make breakpoint pending on future shared library load? (y or [n]) y
+Breakpoint 1 (main) pending.
+(gdb) r
+Starting program:
+No executable specified, use `target exec'.
+(gdb) b main 
+No symbol table is loaded.  Use the "file" command.
+Make breakpoint pending on future shared library load? (y or [n]) y
+Breakpoint 2 (main) pending.
+(gdb) r
+Starting program:
+No executable specified, use `target exec'.
+(gdb) git push
+Undefined command: "git".  Try "help".
+(gdb) q
+PS C:\Users\Admin\C-activity-sets\c-activity-sets\set02> git push 
+Enumerating objects: 9, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 1.30 KiB | 1.30 MiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/khushi-222003/c-activity-sets.git
+   2bcc614..7df674a  main -> main
+PS C:\Users\Admin\C-activity-sets\c-activity-sets\set02> git push
+Everything up-to-date
+PS C:\Users\Admin\C-activity-sets\c-activity-sets\set02>
