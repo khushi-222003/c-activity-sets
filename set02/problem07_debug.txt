@@ -1,0 +1,56 @@
+gdb .\problem07.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\Admin\C-activity-sets\c-activity-sets\set02\problem07.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x40150b: file .\problem07.c, line 25.
+(gdb) r
+Starting program: C:\Users\Admin\C-activity-sets\c-activity-sets\set02/.\problem07.exe
+[New Thread 11304.0x1394]
+[New Thread 11304.0x6a8]
+
+Breakpoint 1, main () at .\problem07.c:25
+25          t=input_triangle();
+(gdb) r
+The program being debugged has been started already.
+Start it from the beginning? (y or n) y
+error return ../../gdb-7.6.1/gdb/windows-nat.c:1275 was 5
+Starting program: C:\Users\Admin\C-activity-sets\c-activity-sets\set02/.\problem07.exe
+[New Thread 16088.0x3f3c]
+[New Thread 16088.0x388]
+
+Breakpoint 1, main () at .\problem07.c:25
+25          t=input_triangle();
+(gdb) n
+Enter the base:
+6
+Enter the altitude:
+5
+26          find_area(&t);
+(gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 16088] will be killed.
+
+Quit anyway? (y or n) y
+error return ../../gdb-7.6.1/gdb/windows-nat.c:1275 was 5
+PS C:\Users\Admin\C-activity-sets\c-activity-sets\set02> git push
+Enumerating objects: 9, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 1.08 KiB | 1.08 MiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/khushi-222003/c-activity-sets.git
+   e790e62..2bcc614  main -> main
+PS C:\Users\Admin\C-activity-sets\c-activity-sets\set02> git push
+Everything up-to-date
+PS C:\Users\Admin\C-activity-sets\c-activity-sets\set02> 
