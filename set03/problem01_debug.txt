@@ -1,0 +1,48 @@
+ gdb problem01.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\Admin\C-activity-sets\c-activity-sets\set03\problem01.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x401559: file problem01.c, line 21.
+(gdb) r
+Starting program: C:\Users\Admin\C-activity-sets\c-activity-sets\set03/problem01.exe
+[New Thread 7316.0x228c]
+[New Thread 7316.0x3310]
+
+Breakpoint 1, main () at problem01.c:21
+21          input(&a,&b,&c,&d);
+(gdb) r
+The program being debugged has been started already.
+Start it from the beginning? (y or n) y
+error return ../../gdb-7.6.1/gdb/windows-nat.c:1275 was 5
+Starting program: C:\Users\Admin\C-activity-sets\c-activity-sets\set03/problem01.exe 
+[New Thread 12700.0x1978]
+[New Thread 12700.0x838]
+
+Breakpoint 1, main () at problem01.c:21
+21          input(&a,&b,&c,&d);
+(gdb) n
+Enetr the first coordiinates
+23
+Enetr the second coordiinates
+34
+22          distance=find_distance(a,b,c,d);
+(gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 12700] will be killed.
+
+Quit anyway? (y or n) y
+error return ../../gdb-7.6.1/gdb/windows-nat.c:1275 was 5
+PS C:\Users\Admin\C-activity-sets\c-activity-sets\set03> git push
+fatal: unable to access 'https://github.com/khushi-222003/c-activity-sets.git/': Could not resolve host: github.com
+PS C:\Users\Admin\C-activity-sets\c-activity-sets\set03> git push
+fatal: unable to access 'https://github.com/khushi-222003/c-activity-sets.git/': Could not resolve host: github.com
+PS C:\Users\Admin\C-activity-sets\c-activity-sets\set03> 
