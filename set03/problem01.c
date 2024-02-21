@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<math.h>
-float input (float *x1, float *y1, float x2, float y2){
+float input (float *x1, float *y1, float *x2, float *y2){
 printf("Enetr the first coordiinates\n");
 scanf("%f,%f", x1,y1);
 printf("Enetr the second coordiinates\n");
