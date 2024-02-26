@@ -18,27 +18,24 @@ int is_composite_number(int n){
             return 1;
         }
     }
-    return -1;
+    return 0;
 }
 int sum_composite_numbers(int n, int a[n]){
     int sum=0;
     for(int i=0;i<n; i++){
-        if(is_composite_number(a[i])){
-        sum+=a[i];
-    
-        }
+        if(is_composite_number(a[i]))
+        sum += a[i];
     }
         return sum;
 }
 void output(int sum){
-    printf("The sum of composite number is %d", sum);
+    printf("The sum of composite number is %d\n", sum);
 }
 int main(){
     int n;
     n=input_array_size();
     int a[100];
     input_array(n,a);
-    is_composite_number(n);
     int sum;
     sum=sum_composite_numbers(n,a);
     output(sum);
