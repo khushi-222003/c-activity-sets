@@ -23,7 +23,7 @@ int is_composite_number(int n){
 int sum_composite_numbers(int n, int a[n]){
     int sum=0;
     for(int i=0;i<n; i++){
-        if(is_composite(a[i])){
+        if(is_composite_number(a[i])){
         sum+=a[i];
     
         }
@@ -38,9 +38,9 @@ int main(){
     n=input_array_size();
     int a[100];
     input_array(n,a);
-    is_composite(n);
+    is_composite_number(n);
     int sum;
-    sum=sum_composite_number(n,a);
+    sum=sum_composite_numbers(n,a);
     output(sum);
     return 0;
 }
