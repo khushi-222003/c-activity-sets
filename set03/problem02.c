@@ -8,6 +8,7 @@ int is_triangle(float x1, float y1, float x2, float y2,float x3, float y3);
 void output(float x1, float y1, float x2, float y2,float x3, float y3, int result);*/
 
 #include<stdio.h>
+#include<math.h>
 void input_triangle(float *x1, float *y1, float *x2, float *y2, float *x3, float *y3){
     printf("Enter the x-coordinate of triangle A\n:");
     scanf("%f",x1);
@@ -25,9 +26,9 @@ void input_triangle(float *x1, float *y1, float *x2, float *y2, float *x3, float
 
 }
 int is_triangle(float x1, float y1, float x2, float y2,float x3, float y3){
-    float side1=sqrt(pow(x2-x1, 2)+ pow(y2-y1, 2));
-    float side2=sqrt(pow(x3-x1, 2)+ pow(y3-y1, 2));
-    float side3=sqrt(pow(x3-x2, 2)+ pow(y3-y2, 2));
+    float side1= sqrt(pow(x2-x1, 2)+ pow(y2-y1, 2));
+    float side2= sqrt(pow(x3-x1, 2)+ pow(y3-y1, 2));
+    float side3= sqrt(pow(x3-x2, 2)+ pow(y3-y2, 2));
     if(side1+side2>side3 && side2+side3>side1 && side3+side1>side2){
         return 1;
     }
@@ -42,13 +43,13 @@ void output(float x1, float y1, float x2, float y2,float x3, float y3, int resul
 
     }
     else if(result==0){
-        printf("The points A,B,C do not forms a triangle")
+        printf("The points A,B,C do not forms a triangle");
     }
 }
 int main(){
     float x1, y1, x2, y2, x3, y3,result;
     input_triangle(&x1, &y1, &x2, &y2, &x3, &y3);
-    triangle=is_triangle(x1,y1,x2,y2,x3,y3);
+    is_triangle(x1,y1,x2,y2,x3,y3);
     output(x1,y1,x2,y2,x3,y3,result);
     return 0;
 }
