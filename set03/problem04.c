@@ -1,53 +1,40 @@
+/*Write a program to find nth number in fibonacci sequence.
 
+> Fibonacci Sequence is of the form: `0, 1, 1, 2, 3, 5, 8, 13, ...`
+
+***Function Declarations***
+```c
+int input();
+int find_fibo(int n);
+void output(int n, int fibo);
+```*/
 #include<stdio.h>
-int input_array_size(){
-    int n;
-    printf("Enter the array size\n");
+int input(){
+    int n,a,b,c;
+    printf("Enter the number\n");
     scanf("%d",&n);
     return n;
 }
-void input_array(int n,int a[n]){
-    printf("Enter the array\n");
-    for(int i=0; i<n; i++){
-        scanf("%d",&a[i]);
+int find_fibo(int n){
+    if (n <= 1)
+        return n;
+    for(int i=0;i<n;i++){
+        int a=0;
+        int b=1;
+        int fibo;
+        fibo=a+b;
+        a=b;
+        b=fibo;
     }
-}
-int is_composite_number(int n){
-    for(int i=2; i <=n/2 ; i++){
-        if(n%i==0){
-            return 1;
-        }
-    
-            return -1;
-        
+    void output(int n, int fibo){
+    printf("The in %d number fibonacci series is %d\n", n ,fibo);
     }
-
-
-}
-int sum_composite_number(int n , int a[n]){
-    int sum=0;
-    for(int i=0; i<n; i++){
-        if(is_composite_number(a[i])){
-            sum+=a[i];
-        }
-    }
-
-    return sum;
-
-}
-
-void output(int sum){
-    printf("sum of composite number is %d",sum);
 }
 int main(){
-    int  n, sum;
-    int a[n];
-    n=input_array_size();
-    input_array(n,a);
-    is_composite_number(n);
-    sum=sum_composite_number(n,a);
-    output(sum);
+    int n,fibo;
+    n=input();
+    fibo=find_fibo(n);
+    output(n,fibo);
     return 0;
-
 
 }
