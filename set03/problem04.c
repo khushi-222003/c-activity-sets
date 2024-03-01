@@ -18,18 +18,22 @@ int input(){
 int find_fibo(int n){
     if (n <= 1)
         return n;
-    for(int i=0;i<n;i++){
         int a=0;
         int b=1;
         int fibo;
+    for(int i=2;i<n;i++){
+        
         fibo=a+b;
         a=b;
         b=fibo;
     }
-    void output(int n, int fibo){
-    printf("The in %d number fibonacci series is %d\n", n ,fibo);
-    }
+    return fibo;
 }
+
+    void output(int n, int fibo){
+    printf("The in %dth number fibonacci series is :%d\n", n ,fibo);
+    }
+
 int main(){
     int n,fibo;
     n=input();
