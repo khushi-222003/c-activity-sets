@@ -4,24 +4,58 @@
 ```c
 void input_string(char* a, char* b);
 int sub_str_index(char* string, char* substring);
-void output(char *string, char *substring, int index);*/
-#include<stdio.h>
-void input_string(char *a, char *b){
-    printf("Enter the string\n");
-    scanf("%s", a);
-    printf("Enter the substring part\n");
-    scanf("%s", b);
+void output(char *string, char *substring, int index);
+```*/
+
+#include <stdio.h>
+#include <string.h>
+
+void input_string(char* a, char* b);
+int sub_str_index(char* string, char* substring);
+void output(char *string, char *substring, int index);
+
+int main() {
+    char string[100], substring[100];
+    int index;
+
+    input_string(string, substring);
+    index = sub_str_index(string, substring);
+    output(string, substring, index);
+
+    return 0;
 }
-int sub_str_index(char* string, char* substring){
-    int k,j;
-    int l=strlen("substring")
-    for(int i=0; string[i]!=\0;i++){
-        k=i;
-        for(int j=0;j<=l-1;j++){
-            if(string[k]!=substring[j]);
-            break;
-            k++
+
+void input_string(char* a, char* b) {
+    printf("Enter a string: ");
+    gets(a);
+
+    printf("Enter a substring: ");
+    gets(b);
+}
+
+int sub_str_index(char* string, char* substring) {
+    int M = strlen(string);
+    int N = strlen(substring);
+
+    for (int i = 0; i <= M-N; i++) {
+        int j;
+        for (j = 0; j < N; j++) {
+            if (string[i + j] != substring[j]) {
+                break;
+            }
         }
-        
+        if (j == N) {
+            return i;
+        }
+    }
+
+    return -1;
+}
+
+void output(char *string, char *substring, int index) {
+    if (index != -1) {
+        printf("'%s' is found in '%s' at index %d\n", substring, string, index);
+    } else {
+        printf("'%s' is not found in '%s'\n", substring, string);
     }
 }

@@ -16,8 +16,7 @@ int input(){
     return n;
 }
 int find_fibo(int n){
-    if (n <= 1)
-        return n;
+    
         int a=0;
         int b=1;
         int fibo;
