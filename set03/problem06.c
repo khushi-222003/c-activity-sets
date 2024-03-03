@@ -40,7 +40,7 @@ int sub_str_index(char* string, char* substring) {
     for (int i = 0; i <= M-N; i++) {
         int j;
         for (j = 0; j < N; j++) {
-            if (string[i + j] != sgubstring[j]) {
+            if (string[i + j] != substring[j]) {
                 break;
             }
         }
